@@ -18,3 +18,4 @@ jobs:
           destination-folder: leetcode
           verbose: true
           commit-header: "[LeetCode Sync]"
+          filter-duplicate-secs: 0 # 중복 필터링을 끄고 모든 Accepted 제출을 동기화
