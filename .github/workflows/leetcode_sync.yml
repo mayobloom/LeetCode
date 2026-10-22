@@ -3,7 +3,7 @@ name: Sync LeetCode
 on:
   workflow_dispatch: # Actions 탭에서 수동 실행 가능
   schedule:
-    - cron: '0 0 * * *' # 매일 자정(UTC 기준)에 자동 실행
+    - cron: '0 */6 * * *'
 
 jobs:
   sync:
@@ -18,4 +18,4 @@ jobs:
           destination-folder: leetcode
           verbose: true
           commit-header: "[LeetCode Sync]"
-          filter-duplicate-secs: 0 # 중복 필터링을 끄고 모든 Accepted 제출을 동기화
+          filter-duplicate-secs: 1800
